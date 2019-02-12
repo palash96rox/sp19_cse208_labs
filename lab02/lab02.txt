@@ -1,0 +1,24 @@
+Aim: Connect two PCs
+
+Materials required
+1. two PCs
+2. one Copper straight through wire
+
+***
+
+Aim: Design network of 5 computers using hub/switch
+
+Materials required
+1. five PCs
+2. one 2960 switch
+3. five Copper straight through wires
+
+
+***
+
+Screens
+
+Screenshots from Cisco Packet Tracer are located in screens/ and are as follows -
+1. 
+
+Author: pa5795

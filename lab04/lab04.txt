@@ -18,7 +18,11 @@ Procedure
 9. Send a message from one PC on the 192.168.1.# network to a random PC on the 192.186.2.# network to test the connection
 10. The end network should look something like the attached screenshot(s).
 
+***
+
 Screens
+
+Screenshots from Cisco Packet Tracer are located in screens/ and are as follows -
 1. lab04_ipconfig.png : IP Configuration for one PC on the first network
 2. lab04_local.png : How the local network within the five PCs and one 2960 switch should look like
 3. lab04_final.png : How the final network should look like with the two local networks connected via a router

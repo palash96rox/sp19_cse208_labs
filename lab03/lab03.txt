@@ -40,3 +40,5 @@ Screenshots from Cisco Packet Tracer are located in screens/ and are as follows 
 3. ring_topology.png
 4. tree_topology.png
 5. mesh_topology.png
+
+Author: pa5795
