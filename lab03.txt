@@ -1,0 +1,42 @@
+Aim: Implementation of different network topologies
+
+Materials required
+1. five PCs
+2. five 2960 switches
+3. four Copper cross-over connecting wires
+4. five Copper straight-through connecting wires
+5. Message
+
+***
+
+Bus Topology
+    Process -
+    1. 
+
+Star Topology
+    Process -
+    1. 
+
+Ring Topology
+    Process -
+    1. 
+
+Tree Topology
+    Process -
+    1. 
+
+Mesh Topology
+    Process -
+    1. 
+
+
+***
+
+Screens
+
+Screenshots from Cisco Packet Tracer are located in screens/ and are as follows -
+1. bus_topology.png
+2. star_topology.png
+3. ring_topology.png
+4. tree_topology.png
+5. mesh_topology.png
