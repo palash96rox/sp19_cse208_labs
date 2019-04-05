@@ -2,7 +2,12 @@ Aim: Connect two PCs
 
 Materials required
 1. two PCs
-2. one Copper straight through wire
+2. one Copper cross over wire
+
+Procedure
+1. Connect the two PCs with the cross over wire
+2. Set the IP of the first PC to 192.168.0.1
+3. Set the IP of the second PC to 192.168.0.2
 
 ***
 
@@ -10,15 +15,20 @@ Aim: Design network of 5 computers using hub/switch
 
 Materials required
 1. five PCs
-2. one 2960 switch
+2. one 2960 switch / one PT Hub
 3. five Copper straight through wires
 
+Procedure
+1. Connect the five PCs to the switch/hub with copper straight through wires
+2. Set the IP of the PCs to 192.168.0.x where x is the PC number in the network
 
 ***
 
 Screens
 
 Screenshots from Cisco Packet Tracer are located in screens/ and are as follows -
-1. 
+1. two.png : Two PCs connected with the copper cross over wire
+2. hub.png : Five PCs connected in a network with a central PT-Hub
+3. switch.png : Five PCs connected in a network with a central 2960 switch
 
 Author: pa5795
