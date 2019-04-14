@@ -1,0 +1,29 @@
+Aim: To design a VLAN using a router and a switch
+
+    Materials Required:
+    1. Four PCs
+    2. One 2911 router
+    3. One 2960 Switch
+
+    Procedure
+    1. 
+
+***
+Aim: To design a VLAN using two switch
+
+    Materials Required:
+    1. Four PCs
+    2. Two 2960 Switches
+
+    Procedure
+    1. 
+
+***
+
+Screenshots: Screenshots from Cisco Packet Tracer are in screens/ and are as follows:
+
+    1.
+
+***
+
+Author: pa5795
