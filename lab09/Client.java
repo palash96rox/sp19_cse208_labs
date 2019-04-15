@@ -1,32 +1,33 @@
-import java.net.*; 
-import java.io.*; 
+import java.net.*;
+import java.util.Scanner;
+import java.io.IOException;
 
 public class Client { 
+	public static void main(String args[]) { 
+		Scanner sc = new Scanner(System.in);
+    DatagramSocket ds = null;
+    InetAddress ip = null;
+    try {
+      ds = new DatagramSocket(); 
+      ip = InetAddress.getLocalHost(); 
+    } catch (SocketException e) {
+      System.err.println(e);
+    } catch (UnknownHostException e) {
+      System.err.println(e);
+    }
 
-	private Socket socket		 = null; 
-	private DataOutputStream out	 = null; 
-
-	public Client(String address, int port) { 
-		try { 
-			socket = new Socket(address, port); 
-			out = new DataOutputStream(socket.getOutputStream()); 
-			out.writeBytes("I am connected");
-		} catch(UnknownHostException u) { 
-			System.out.println(u); 
-		} catch(IOException i) { 
-			System.out.println(i); 
+		byte buffer[] = null; 
+    System.out.println("Send messages below:");
+		while (true) { 
+			String inp = sc.nextLine();
+			buffer = inp.getBytes();
+			DatagramPacket DpSend = new DatagramPacket(buffer, buffer.length, ip, 5000); 
+			try {
+        ds.send(DpSend); 
+      } catch (IOException e) {
+        System.err.println(e);
+      }
+			if (inp.equalsIgnoreCase("bye")) { break; }
 		}
-		// Close connection
-		try {
-			out.close(); 
-			socket.close(); 
-		} catch(IOException i) { 
-			System.out.println(i); 
-		} 
-	} 
-
-	// Driver Method
-	public static void main(String args[]) {
-		Client client = new Client("localhost", 5500); 
-	} 
-} 
+	}
+}

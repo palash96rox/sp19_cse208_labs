@@ -1,36 +1,35 @@
-import java.net.*; 
-import java.io.*; 
-  
+import java.net.*;
+import java.io.IOException;
+
 public class Server { 
-  
-  private Socket          socket   = null; 
-  private ServerSocket    server   = null; 
-  private BufferedReader  in       = null; 
-  
-  public Server(int port) { 
-    try { 
-      server = new ServerSocket(port); 
-      System.out.println("Server ready"); 
-      System.out.println("Waiting for a client ..."); 
-      socket = server.accept(); 
-      System.out.println("Client accepted");
 
-      // takes input from the client socket 
-      in = new BufferedReader(new InputStreamReader(socket.getInputStream())); 
-      String line = in.readLine(); 
-      System.out.println("Client data: " + line); 
+  public static StringBuilder data(byte[] a) 	{ 
+		if (a == null) 
+			return null;
+		StringBuilder ret = new StringBuilder(); 
+		int i = 0;
+		while (a[i] != 0) { ret.append((char) a[i++]); } 
+		return ret; 
+	}
 
-      // close connection 
-      System.out.println("Closing connection"); 
-      in.close(); 
-      socket.close(); 
-    } catch(IOException i) { 
-      System.out.println(i); 
-    } 
-  } 
-
-  // Driver Method
-  public static void main(String args[]) { 
-    Server server = new Server(5500); 
-  } 
-} 
+	public static void main(String[] args) {
+    DatagramSocket ds = null;
+		try {
+      ds = new DatagramSocket(5000); 
+    } catch (SocketException e) {
+      System.err.println(e);
+    }
+		byte[] receive = new byte[65535];
+		while (true) { 
+			DatagramPacket DpReceive = new DatagramPacket(receive, receive.length); 
+			try {
+        ds.receive(DpReceive);
+      } catch (IOException e) {
+        System.err.println(e);
+      }
+			System.out.println("Client says: " + data(receive));
+			if (data(receive).toString().equalsIgnoreCase("bye")) { break; } 
+			receive = new byte[65535]; 
+		} 
+	}
+}
